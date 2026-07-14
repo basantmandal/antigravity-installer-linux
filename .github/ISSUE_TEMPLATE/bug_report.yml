@@ -1,0 +1,88 @@
+name: Bug Report
+description: Report a bug to help us improve the Antigravity IDE Linux Installer.
+title: '[Bug]: '
+labels: ['bug']
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## Thank you for reporting a bug!
+
+        Please fill out the form below with as much detail as possible. This helps us investigate and resolve the issue quickly.
+
+        > **Before reporting:** Please check if a similar issue already exists.
+
+  - type: input
+    id: linux-distro
+    attributes:
+      label: Linux Distribution & Version
+      description: What Linux distribution are you using?
+      placeholder: 'e.g., Ubuntu 24.04 LTS, Debian 12'
+    validations:
+      required: true
+
+  - type: input
+    id: bash-version
+    attributes:
+      label: Bash Version
+      description: What version of Bash are you running? (Run `bash --version`)
+      placeholder: 'e.g., 5.1.16(1)-release'
+    validations:
+      required: true
+
+  - type: textarea
+    id: bug-description
+    attributes:
+      label: Bug Description
+      description: Provide a clear and concise description of what the bug is.
+      placeholder: 'Describe the bug in detail...'
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps-to-reproduce
+    attributes:
+      label: Steps to Reproduce
+      description: How can we reproduce this issue? Please provide step-by-step instructions.
+      placeholder: |
+        1. Downloaded the script
+        2. Ran `./install.sh`
+        3. See error
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected-behavior
+    attributes:
+      label: Expected Behavior
+      description: What did you expect to happen?
+      placeholder: 'Describe what you expected to happen...'
+    validations:
+      required: true
+
+  - type: textarea
+    id: actual-behavior
+    attributes:
+      label: Actual Behavior
+      description: What actually happened?
+      placeholder: 'Describe what actually happened...'
+    validations:
+      required: true
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: Logs/Error Output
+      description: If applicable, paste any relevant logs or error messages from the terminal.
+      render: shell
+    validations:
+      required: false
+
+  - type: textarea
+    id: screenshots
+    attributes:
+      label: Screenshots
+      description: If applicable, add screenshots to help explain your problem.
+      placeholder: 'Drag and drop images here or paste image URLs...'
+    validations:
+      required: false
